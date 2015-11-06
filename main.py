@@ -14,7 +14,7 @@ def usage():
     print "author: %s" %(author)
     print "##################################"
     print ""
-    print "usage: %s binary_file\n" %(sys.argv[0])
+    print "usage: %s [-h help] [-d <depth>] [-m <mode>] <binary_file>\n" %(sys.argv[0])
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
