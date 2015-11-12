@@ -7,13 +7,13 @@ gadget_arm = [
     [b"[\x30-\x3f]\xff\x2f\xe1", 4, 4], # blx, arm mode
     [b"[\x10-\x1f]\xff\x2f\xe1", 4, 4], # bx, arm mode
     [b"[\x00-\xff]\x80\xbd\xe8", 4, 4], # pop {,pc}, arm mode
-    [b"[\x00-\xff]{3}\xef", 4, 4],      # swi, arm mode
+    [b"[\x00-\xff]\x00\x00\xef", 4, 4], # swi, arm mode
 ]
 gadget_thumb = [
     [b"[\x80-\xf8]\x47", 2, 2],         # blx, thumb mode
     [b"[\x00-\x78]\x47", 2, 2],         # bx, thumb mode
     [b"[\x00-\xff]\xbd", 2, 2],         # pop {,pc}, thumb mode
-    [b"[\x00-\xff]\xef", 2, 2],         # swi, thumb mode
+    [b"[\x00-\xff]\xdf", 2, 2],         # swi, thumb mode
 ]
 
 
